@@ -1,60 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tránsito: solo inconvenientes (Accesos, AUBASA/Zona Sur, Costa Atlántica)</title>
+    <title>Resumen de tránsito: obras, accesos, AUBASA y Costa Atlántica</title>
     <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
-    <description>Solo inconvenientes: accesos a CABA/GBA, AUBASA y zona sur, y camino a la Costa Atlántica. Fuente: alertastransito.com y AUBASA/Provincia.</description>
+    <description>Resumen de inconvenientes: obras y cortes, accesos y autopistas (AUBASA), camino a la Costa Atlántica y transporte público.</description>
     <language>es-AR</language>
-    <lastBuildDate>Tue, 27 Oct 2026 09:15:59 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 09:30:49 -0300</lastBuildDate>
     <ttl>15</ttl>
     <atom:link href="https://radiofmq.github.io/rss-transito/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>[AUBASA / Zona Sur] BALP: Balizamiento por trabajos de mantenimiento desde el km 12,5 al km 10,3 sentido CABA, afecta carriles...</title>
+      <title>🚧 Obras y cortes — 27/10 09:30</title>
       <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
-      <guid isPermaLink="false">c2a0512777b08e72</guid>
-      <pubDate>Tue, 27 Oct 2026 06:45:31 -0300</pubDate>
-      <category>AUBASA / Zona Sur</category>
-      <description>🚨🐢BALP: Balizamiento por trabajos de mantenimiento desde el km 12,5 al km 10,3 sentido CABA, afecta carriles 1 y 2.- 🚨BALP: IMPORTANTE: Por obras permanecerá cerrado el egreso hacia Punta Lara altura km 52,8. Opción de egreso: Hacia Diagonal 74 girar en rotonda y retomar por Diagonal hacia Punta Lara.- 🚨BALP: Balizamiento por tareas de mantenimiento del km 18,7 al km 19,5 sentido LP, afecta car...</description>
+      <guid isPermaLink="false">obras-1c79932120ef</guid>
+      <pubDate>Tue, 27 Oct 2026 09:30:49 -0300</pubDate>
+      <description><![CDATA[<ul><li><b>AUBASA (Bs. As.–La Plata):</b> Por obras permanecerá cerrado el egreso hacia Punta Lara altura km 52,8. Opción de egreso: Hacia Diagonal 74 girar en rotonda y retomar por Diagonal hacia Punta Lara.</li><li>Desde el 24/10, a las 13 hs, se cerrará la salida a Carabobo de la autopista 25 de Mayo sentido al centro durante 20 días por obras de construcción de las nuevas defensas TL5, que aportan mayor seguridad vial. Como alternativa, los usuarios podrán utilizar la siguiente salida, hacia Av. La Plata.</li></ul>]]></description>
     </item>
     <item>
-      <title>[Accesos CABA/GBA] Desde el 24/10, a las 13 hs, se cerrará la salida a Carabobo de la autopista 25 de Mayo sentido al centro d...</title>
+      <title>🚗 Accesos y autopistas — 27/10 09:30</title>
       <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
-      <guid isPermaLink="false">03f2d14efb948476</guid>
-      <pubDate>Mon, 26 Oct 2026 13:30:23 -0300</pubDate>
-      <category>Accesos CABA/GBA</category>
-      <description>🚫 Desde el 24/10, a las 13 hs, se cerrará la salida a Carabobo de la autopista 25 de Mayo sentido al centro durante 20 días por obras de construcción de las nuevas defensas TL5, que aportan mayor seguridad vial. ↗️ Como alternativa, los usuarios podrán utilizar la siguiente salida, hacia Av. La Plata.</description>
+      <guid isPermaLink="false">accesos-b59ebe28bd91</guid>
+      <pubDate>Tue, 27 Oct 2026 09:30:49 -0300</pubDate>
+      <description><![CDATA[<ul><li><b>AUBASA (Bs. As.–La Plata):</b> balizamiento por tareas de mantenimiento: km 12,5→10,3 sentido CABA (carriles 1 y 2); km 18,7→19,5 sentido La Plata (carril 4); km 20,5→21,3 sentido La Plata (carril 4).</li><li><b>Obra en curso:</b> Cuarto carril en la Autopista Buenos Aires–La Plata entre el Acceso Sudeste (km 11,5) y Hudson (km 30,45), sentido La Plata. Posibles interrupciones, sobre todo de noche. <a href="https://gba.gob.ar/infraestructura/noticias/la_provincia_avanza_con_la_construcci%C3%B3n_del_cuarto_carril_de_la_autopista">Fuente</a></li></ul>]]></description>
     </item>
     <item>
-      <title>[Costa Atlántica] Precaución: Nuevo desvío al tránsito en la Ruta Provincial Nº11</title>
+      <title>🏖 Costa Atlántica — 27/10 09:30</title>
       <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
-      <guid isPermaLink="false">fb47238d27bc35ed</guid>
-      <pubDate>Mon, 26 Oct 2026 13:30:23 -0300</pubDate>
-      <category>Costa Atlántica</category>
-      <description>Precaución: Nuevo desvío al tránsito en la Ruta Provincial Nº11 📅 El cambio comenzará a implementarse desde este jueves 4 de junio y estará debidamente señalizado para garantizar una circulación segura de los usuarios. ➡️🚗 Sentido Mar Chiquita: Los vehículos serán desviados hacia la calzada contraria entre los kilómetros 443 y 448. ⬅️🚙 Sentido Villa Gesell: El desvío se realizará entre los kiló...</description>
-    </item>
-    <item>
-      <title>Repavimentación de la Autovía 2 (146 km) en ejecución</title>
-      <link>https://www.lacapitalmdp.com/avanza-la-repavimentacion-de-la-ruta-2-y-comienza-la-construccion-de-otro-tramo-de-la-autovia-11/</link>
-      <guid isPermaLink="false">fea8ea1bd83148b4</guid>
-      <pubDate>Mon, 26 Oct 2026 13:30:23 -0300</pubDate>
-      <category>Costa Atlántica</category>
-      <description>Obra de repavimentación en ambas calzadas de la Autovía 2, con avance reportado del 60 % (fecha de la nota no confirmada). Circular con precaución en tramos en obra.</description>
-    </item>
-    <item>
-      <title>Cuarto carril en Autopista Buenos Aires–La Plata (Acceso Sudeste – Hudson)</title>
-      <link>https://gba.gob.ar/infraestructura/noticias/la_provincia_avanza_con_la_construcci%C3%B3n_del_cuarto_carril_de_la_autopista</link>
-      <guid isPermaLink="false">75cbbd5cdefd285e</guid>
-      <pubDate>Thu, 18 Jun 2026 00:00:00 -0300</pubDate>
-      <category>AUBASA / Zona Sur</category>
-      <description>AUBASA construye un cuarto carril entre el Acceso Sudeste (km 11,5) y el peaje Hudson (km 30,45), sentido La Plata. Obra en curso: puede haber interrupciones, sobre todo de noche.</description>
-    </item>
-    <item>
-      <title>Obras de autovía en Ruta 11 entre Villa Gesell y Mar Chiquita (72,4 km)</title>
-      <link>https://www.gba.gob.ar/node/53253</link>
-      <guid isPermaLink="false">2bdfba7deed2f410</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 -0300</pubDate>
-      <category>Costa Atlántica</category>
-      <description>La Provincia continúa la transformación en autovía de este tramo de la Ruta Provincial 11. Finalización estimada entre mediados y fines de 2026; verificar estado.</description>
+      <guid isPermaLink="false">costa-62eefb0575a2</guid>
+      <pubDate>Tue, 27 Oct 2026 09:30:49 -0300</pubDate>
+      <description><![CDATA[<ul><li>Precaución: Nuevo desvío al tránsito en la Ruta Provincial Nº11. Sentido Mar Chiquita: Los vehículos serán desviados hacia la calzada contraria entre los kilómetros 443 y 448. Sentido Villa Gesell: El desvío se realizará entre los kilómetros 448 y 443, también utilizando la calzada opuesta.</li><li><b>Obra en curso:</b> Repavimentación de la Autovía 2 (146 km, ambas calzadas) en ejecución; avance reportado del 60 % (fecha de la nota no confirmada). <a href="https://www.lacapitalmdp.com/avanza-la-repavimentacion-de-la-ruta-2-y-comienza-la-construccion-de-otro-tramo-de-la-autovia-11/">Fuente</a></li><li><b>Obra en curso:</b> Obras de autovía en la Ruta 11 entre Villa Gesell y Mar Chiquita (72,4 km). Finalización estimada entre mediados y fines de 2026; verificar estado. <a href="https://www.gba.gob.ar/node/53253">Fuente</a></li></ul>]]></description>
     </item>
   </channel>
 </rss>

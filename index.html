@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estado del tránsito – Quilmes y Zona Sur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg1:#0b2a7a; --bg2:#061233; --panel:#071a52; --text:#ffffff; --muted:#b9c8f0;
+  --ok:#22c55e; --warn:#facc15; --bad:#ef4444; --none:#cbd5e1;
+  --c-autopistas:#22c55e; --c-trenes:#f59e0b; --c-subtes:#ef4444; --c-rutas:#1ea7ff;
+  --head:"Barlow Condensed","Arial Narrow","Segoe UI",Arial,sans-serif;
+  --body:"Barlow","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{color-scheme:dark}
+body{
+  font-family:var(--body);color:var(--text);min-height:100vh;
+  background:
+    linear-gradient(115deg,transparent 0 55%,rgba(60,140,255,.18) 55.2% 57%,transparent 57.2%),
+    linear-gradient(115deg,transparent 0 62%,rgba(60,140,255,.12) 62.2% 63%,transparent 63.2%),
+    radial-gradient(1200px 500px at 85% -10%,rgba(255,170,90,.28),transparent 60%),
+    linear-gradient(160deg,var(--bg1),var(--bg2) 70%);
+  padding:clamp(12px,2vw,28px);
+}
+.wrap{max-width:1320px;margin:0 auto}
+
+/* ---------- encabezado ---------- */
+header{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(12px,2vw,28px);align-items:stretch;margin-bottom:clamp(14px,2vw,22px)}
+.brand{display:flex;align-items:center;gap:clamp(12px,2vw,26px)}
+.brand .logo{width:clamp(70px,9vw,120px);flex:none}
+.brand .vr{width:2px;align-self:stretch;background:rgba(255,255,255,.55);margin:6px 0}
+.brand h1{font-family:var(--head);font-weight:800;line-height:.9;text-transform:uppercase}
+.brand h1 .l1{display:block;font-size:clamp(30px,4.6vw,62px);letter-spacing:.5px}
+.brand h1 .l2{display:block;font-size:clamp(52px,8.6vw,120px);letter-spacing:1px;
+  background:linear-gradient(180deg,#8be9ff,#27b8ff 55%,#1c7dff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand .tags{font-family:var(--head);font-weight:600;font-size:clamp(13px,1.6vw,22px);letter-spacing:1px;margin-top:6px;white-space:nowrap}
+.brand .tags i{font-style:normal;opacity:.6;margin:0 .6em}
+.where{
+  background:linear-gradient(120deg,rgba(10,50,150,.92),rgba(10,35,110,.75));
+  border-radius:18px 18px 18px 40px;padding:clamp(14px,1.8vw,24px) clamp(16px,2vw,30px);
+  border:1px solid rgba(120,170,255,.35);display:flex;flex-direction:column;justify-content:center;gap:12px}
+.where .row{display:flex;gap:16px;align-items:center}
+.where svg{width:clamp(32px,4vw,52px);flex:none}
+.where h2{font-family:var(--head);font-weight:800;font-size:clamp(26px,3.4vw,46px);text-transform:uppercase;line-height:1}
+.where p{font-family:var(--head);font-weight:600;font-size:clamp(14px,1.7vw,22px);text-transform:uppercase;letter-spacing:.5px;line-height:1.25}
+.where p b{opacity:.55;margin:0 .5em;font-weight:600}
+.date{display:flex;align-items:center;gap:12px;background:rgba(5,20,70,.85);border-radius:12px;padding:10px 16px;
+  font-family:var(--head);font-weight:700;font-size:clamp(17px,2vw,26px)}
+.date svg{width:30px;flex:none}
+
+/* ---------- tarjetas ---------- */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.6vw,22px)}
+.card{
+  --c:var(--c-autopistas);
+  display:grid;grid-template-columns:clamp(96px,14vw,180px) 1fr;min-height:260px;
+  background:linear-gradient(135deg,rgba(7,26,82,.97),rgba(5,16,56,.97));
+  border:3px solid var(--c);border-radius:22px;overflow:hidden;
+  box-shadow:0 0 0 1px rgba(255,255,255,.06),0 0 26px color-mix(in srgb,var(--c) 45%,transparent)}
+#c-autopistas{--c:var(--c-autopistas)} #c-trenes{--c:var(--c-trenes)}
+#c-subtes{--c:var(--c-subtes)} #c-rutas{--c:var(--c-rutas)}
+.side{position:relative;background:linear-gradient(180deg,color-mix(in srgb,var(--c) 70%,#000),#07123a);display:flex;flex-direction:column;align-items:center}
+.side .ico{width:clamp(64px,8.5vw,108px);aspect-ratio:1;border-radius:50%;margin-top:clamp(10px,1.4vw,18px);
+  background:radial-gradient(circle at 35% 30%,color-mix(in srgb,var(--c) 85%,#fff),color-mix(in srgb,var(--c) 70%,#000));
+  border:4px solid rgba(255,255,255,.9);display:grid;place-items:center;z-index:2}
+.side .ico svg{width:62%;height:62%}
+.side .scene{position:absolute;left:0;right:0;bottom:0;height:46%;width:100%}
+.main{padding:clamp(14px,1.6vw,22px) clamp(14px,1.8vw,26px);display:flex;flex-direction:column;gap:10px;min-width:0}
+.head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.head h2{font-family:var(--head);font-weight:800;text-transform:uppercase;font-size:clamp(26px,3.2vw,44px);line-height:.95}
+.head .sub{font-family:var(--head);font-weight:600;font-size:clamp(14px,1.5vw,20px);line-height:1.15;margin-top:4px}
+.pill{flex:none;display:flex;align-items:center;gap:8px;border-radius:999px;padding:8px 16px 8px 10px;
+  font-family:var(--head);font-weight:800;text-transform:uppercase;line-height:1;text-align:left;max-width:48%}
+.pill svg{width:30px;flex:none}
+.pill .t1{display:block;font-size:clamp(13px,1.4vw,19px)}
+.pill .t2{display:block;font-size:clamp(10px,1vw,13px);font-weight:700;margin-top:2px}
+.pill.ok{background:var(--ok);color:#052e12}
+.pill.warn{background:var(--warn);color:#2a2100}
+.pill.bad{background:var(--bad);color:#fff}
+.pill.none{background:var(--none);color:#1e293b}
+.rule{height:3px;border-radius:3px;background:var(--c)}
+.body{flex:1;font-size:clamp(14px,1.45vw,19px);line-height:1.38;font-weight:500}
+.body ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.body li::before{content:"▸ ";color:var(--c)}
+.body li.info{color:var(--muted);font-size:.9em}
+.body .more{color:var(--muted);font-size:.85em;margin-top:4px}
+.foot{display:flex;align-items:center;gap:12px;font-size:clamp(13px,1.3vw,17px);color:#e6eeff;font-weight:600}
+.foot svg{width:28px;flex:none}
+.foot i{font-style:normal;opacity:.5}
+
+/* ---------- leyenda ---------- */
+.legend{margin-top:clamp(12px,1.6vw,22px);display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;
+  background:rgba(5,20,70,.85);border:1px solid rgba(80,150,255,.55);border-radius:999px;padding:12px clamp(16px,2vw,32px)}
+.legend .it{display:flex;align-items:center;gap:10px;font-size:clamp(13px,1.35vw,18px);font-weight:500}
+.legend .dot{width:26px;height:26px;border-radius:50%;box-shadow:inset 0 -4px 6px rgba(0,0,0,.25),0 0 8px rgba(255,255,255,.2)}
+.legend .info{margin-left:auto;display:flex;align-items:center;gap:12px;padding-left:24px;border-left:1px solid rgba(80,150,255,.55)}
+.legend .info svg{width:34px}
+.legend .info b{display:block;font-family:var(--head);font-size:clamp(18px,1.9vw,26px);font-weight:800}
+.legend .info small{display:block;font-size:clamp(11px,1.1vw,14px);opacity:.9}
+.demo{display:none;background:#7c3aed;color:#fff;font-weight:700;text-align:center;border-radius:10px;padding:6px 10px;margin-bottom:12px}
+
+@media (max-width:980px){
+  header{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .legend .info{margin-left:0;border-left:0;padding-left:0}
+}
+@media (max-width:520px){
+  .card{grid-template-columns:1fr}
+  .side{flex-direction:row;height:84px;justify-content:center}
+  .side .scene{display:none}
+  .side .ico{margin-top:0;width:64px}
+  .head{flex-direction:column}
+  .pill{max-width:100%}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-road" viewBox="0 0 100 100"><path d="M36 8h28l30 84H6z" fill="#fff"/><path d="M50 12v14M50 36v16M50 62v30" stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"/></symbol>
+    <symbol id="i-train" viewBox="0 0 100 100"><rect x="22" y="8" width="56" height="72" rx="14" fill="#fff"/><rect x="30" y="18" width="40" height="26" rx="5" fill="currentColor"/><circle cx="36" cy="62" r="5" fill="currentColor"/><circle cx="64" cy="62" r="5" fill="currentColor"/><path d="M30 80l-10 14M70 80l10 14" stroke="#fff" stroke-width="6" stroke-linecap="round"/></symbol>
+    <symbol id="i-bus" viewBox="0 0 24 24"><path fill="currentColor" d="M5 3h14a2 2 0 0 1 2 2v12a2 2 0 0 1-1 1.7V21h-3v-2H7v2H4v-2.3A2 2 0 0 1 3 17V5a2 2 0 0 1 2-2zm0 4v5h14V7zm2.5 8a1.3 1.3 0 1 0 0 2.6 1.3 1.3 0 0 0 0-2.6zm9 0a1.3 1.3 0 1 0 0 2.6 1.3 1.3 0 0 0 0-2.6z"/></symbol>
+    <symbol id="i-road-s" viewBox="0 0 24 24"><path fill="currentColor" d="M9 2h6l5 20h-4l-.6-3H8.6L8 22H4zm1.2 8-.6 3h4.8l-.6-3zM11 3.5v3h2v-3z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#fff"/><path d="M8 16.5l5.5 5.5L24 11" fill="none" stroke="#16a34a" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 32 32"><path d="M16 3L30 28H2z" fill="#111827" stroke="#111827" stroke-width="2" stroke-linejoin="round"/><path d="M16 12v8" stroke="#facc15" stroke-width="3.2" stroke-linecap="round"/><circle cx="16" cy="24" r="1.9" fill="#facc15"/></symbol>
+    <symbol id="i-cross" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#fff"/><path d="M10 10l12 12M22 10L10 22" stroke="#dc2626" stroke-width="3.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-q" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#fff"/><path d="M12 12.5a4 4 0 1 1 6 3.4c-1.3.8-2 1.5-2 3" fill="none" stroke="#475569" stroke-width="3" stroke-linecap="round"/><circle cx="16" cy="24" r="1.8" fill="#475569"/></symbol>
+    <symbol id="s-road" viewBox="0 0 200 100" preserveAspectRatio="xMidYMax slice"><rect width="200" height="100" fill="#3b6fb6" opacity=".55"/><rect y="38" width="200" height="62" fill="#2c4a2e" opacity=".85"/><path d="M92 38h16l78 62H14z" fill="#3a3f4b"/><path d="M100 40v60" stroke="#fff" stroke-width="3" stroke-dasharray="7 6" opacity=".9"/></symbol>
+    <symbol id="s-rail" viewBox="0 0 200 100" preserveAspectRatio="xMidYMax slice"><rect width="200" height="100" fill="#0b1431" opacity=".7"/><path d="M92 30L40 100M108 30l52 70" stroke="#9fb3d9" stroke-width="3"/><path d="M80 52h40M72 66h56M62 82h76" stroke="#6b7fa8" stroke-width="3"/><rect x="78" y="20" width="44" height="44" rx="8" fill="#e8eefc"/><rect x="84" y="26" width="32" height="18" rx="3" fill="#1d3a8a"/><circle cx="88" cy="54" r="3" fill="#fde047"/><circle cx="112" cy="54" r="3" fill="#fde047"/></symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <div class="demo" id="demo">MODO DEMO – datos de ejemplo, no son reales</div>
+
+  <header>
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 100 100" aria-hidden="true" style="color:#0b2a7a"><use href="#i-road"/></svg>
+      <div class="vr"></div>
+      <div>
+        <h1><span class="l1">Estado del</span><span class="l2">Tránsito</span></h1>
+        <div class="tags">AUTOPISTAS<i>/</i>TRANSPORTE<i>/</i>RUTAS</div>
+      </div>
+    </div>
+    <div class="where">
+      <div class="row">
+        <svg viewBox="0 0 32 40" aria-hidden="true"><path d="M16 1C8 1 2 7 2 15c0 10 14 24 14 24s14-14 14-24C30 7 24 1 16 1z" fill="#fff"/><circle cx="16" cy="15" r="5.5" fill="#0b2a7a"/></svg>
+        <div>
+          <h2>Quilmes y Zona Sur</h2>
+          <p>Accesos a CABA<b>|</b>Puente Pueyrredón<br>Autopista Bs. As. – La Plata</p>
+        </div>
+      </div>
+      <div class="date">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="6" width="26" height="23" rx="4" fill="#fff"/><rect x="3" y="6" width="26" height="7" rx="3" fill="#1d4ed8"/><path d="M9 3v6M23 3v6" stroke="#fff" stroke-width="3" stroke-linecap="round"/><g fill="#1d4ed8"><rect x="8" y="16" width="4" height="3"/><rect x="14" y="16" width="4" height="3"/><rect x="20" y="16" width="4" height="3"/><rect x="8" y="22" width="4" height="3"/><rect x="14" y="22" width="4" height="3"/></g></svg>
+        <span id="fecha">—</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="grid">
+    <article class="card" id="c-autopistas">
+      <div class="side"><div class="ico" style="color:var(--c-autopistas)"><svg viewBox="0 0 100 100"><use href="#i-road"/></svg></div><svg class="scene"><use href="#s-road"/></svg></div>
+      <div class="main">
+        <div class="head"><div><h2>Autopistas</h2><p class="sub">Autopista Buenos Aires – La Plata</p></div><span class="pill none"></span></div>
+        <div class="rule"></div><div class="body"></div>
+        <div class="foot"><svg viewBox="0 0 24 24"><use href="#i-road-s"/></svg>AUBASA</div>
+      </div>
+    </article>
+
+    <article class="card" id="c-trenes">
+      <div class="side"><div class="ico" style="color:var(--c-trenes)"><svg viewBox="0 0 100 100"><use href="#i-train"/></svg></div><svg class="scene"><use href="#s-rail"/></svg></div>
+      <div class="main">
+        <div class="head"><div><h2>Trenes</h2><p class="sub">Línea Roca</p></div><span class="pill none"></span></div>
+        <div class="rule"></div><div class="body"></div>
+        <div class="foot"><svg viewBox="0 0 24 24"><use href="#i-bus"/></svg>Trenes Argentinos</div>
+      </div>
+    </article>
+
+    <article class="card" id="c-subtes">
+      <div class="side"><div class="ico" style="color:var(--c-subtes)"><svg viewBox="0 0 100 100"><use href="#i-train"/></svg></div><svg class="scene"><use href="#s-rail"/></svg></div>
+      <div class="main">
+        <div class="head"><div><h2>Subtes y Premetro</h2><p class="sub">Ciudad de Buenos Aires</p></div><span class="pill none"></span></div>
+        <div class="rule"></div><div class="body"></div>
+        <div class="foot"><svg viewBox="0 0 24 24"><use href="#i-bus"/></svg>Subte Buenos Aires</div>
+      </div>
+    </article>
+
+    <article class="card" id="c-rutas">
+      <div class="side"><div class="ico" style="color:var(--c-rutas)"><svg viewBox="0 0 100 100"><use href="#i-road"/></svg></div><svg class="scene"><use href="#s-road"/></svg></div>
+      <div class="main">
+        <div class="head"><div><h2>Rutas</h2><p class="sub">Corredor Atlántico (Autovía 2 y Ruta 11)</p></div><span class="pill none"></span></div>
+        <div class="rule"></div><div class="body"></div>
+        <div class="foot"><svg viewBox="0 0 24 24"><use href="#i-road-s"/></svg>Corredor Atlántico</div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="legend">
+    <div class="it"><span class="dot" style="background:var(--ok)"></span>Normal / fluido</div>
+    <div class="it"><span class="dot" style="background:var(--warn)"></span>Demoras / precaución</div>
+    <div class="it"><span class="dot" style="background:var(--bad)"></span>Corte / interrupción</div>
+    <div class="it"><span class="dot" style="background:var(--none)"></span>Sin información</div>
+    <div class="info">
+      <svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="16" cy="16" r="3" fill="#fff"/><path d="M10 10a8.5 8.5 0 0 0 0 12M22 10a8.5 8.5 0 0 1 0 12M6 6a14 14 0 0 0 0 20M26 6a14 14 0 0 1 0 20"/></svg>
+      <div><b>¡Mantenete informado!</b><small id="upd">La información puede cambiar durante el día.</small></div>
+    </div>
+  </footer>
+</div>
+
+<script>
+"use strict";
+/* ===== Configuración ===== */
+const RSS_URL    = "rss.xml";          // mismo sitio (GitHub Pages): lo genera transito_rss.py
+const REFRESH_MS = 20 * 60 * 1000;     // actualización automática cada 20 minutos
+const RETRY_MS   = 2 * 60 * 1000;      // reintento si falla la carga
+const STALE_MIN  = 90;                 // aviso si el feed tiene más de 90 min
+const MAX_ITEMS  = 3;
+const MAX_CHARS  = 190;
+
+/* Qué alertas del RSS alimentan cada recuadro */
+const CARDS = {
+  autopistas: { sections: ["obras", "accesos"], match: /AUBASA|BALP|Buenos Aires.{0,3}La Plata|Punta Lara|Hudson|Acceso Sudeste/i,
+    okText: "Sin alertas en la Autopista Buenos Aires – La Plata en el reporte actual.",
+    warn: ["PRECAUCIÓN", "POR OBRAS"], bad: ["CORTE", "EN LA AUTOPISTA"] },
+  trenes: { sections: ["transporte"], match: /roca/i,
+    okText: "Sin novedades reportadas para la línea Roca. Confirmar el estado antes de viajar.",
+    warn: ["SERVICIO", "CON AFECTACIONES"], bad: ["SERVICIO", "INTERRUMPIDO"] },
+  subtes: { sections: ["transporte"], match: /subte|premetro|l[ií]nea [A-HP]\b/i,
+    okText: "Sin novedades reportadas en subtes y premetro. Confirmar el estado antes de viajar.",
+    warn: ["AFECTACIONES", "REPORTADAS"], bad: ["SERVICIO", "INTERRUMPIDO"] },
+  rutas: { sections: ["costa"], match: /./,
+    okText: "Sin alertas en el Corredor Atlántico (Autovía 2, Ruta 11) en el reporte actual.",
+    warn: ["PRECAUCIÓN", "POR OBRAS Y CORTES"], bad: ["CORTE", "EN LA RUTA"] }
+};
+const BAD_RE = /corte total|cortad[ao]|sin servicio|interrump|suspendid|\bparo\b/i;
+const ONGOING_RE = /^Obra en curso/i;
+
+/* ===== Datos de ejemplo (solo con #demo en la URL) ===== */
+const DEMO = {
+  built: new Date(),
+  sections: {
+    obras: ["AUBASA (Bs. As.–La Plata): Por obras permanecerá cerrado el egreso hacia Punta Lara (km 52,8)."],
+    accesos: ["AUBASA (Bs. As.–La Plata): balizamiento por mantenimiento: km 12,5→10,3 sentido CABA (carriles 1 y 2).",
+              "Obra en curso: Cuarto carril entre el Acceso Sudeste (km 11,5) y Hudson (km 30,45), sentido La Plata."],
+    costa: ["Desvío por calzada contraria entre los km 443 y 448 de la Ruta 11, en ambos sentidos.",
+            "Obra en curso: Repavimentación de la Autovía 2 (146 km)."],
+    transporte: ["Servicio reducido en la línea Roca por trabajos en vía.", "Cierres por obras en estaciones de la línea B."]
+  }
+};
+
+/* ===== Utilidades ===== */
+const $ = (s, el = document) => el.querySelector(s);
+const txt = (s, n) => { s = s.replace(/\s+/g, " ").trim(); return s.length > n ? s.slice(0, n).replace(/\s\S*$/, "") + "…" : s; };
+
+function renderDate() {
+  const f = new Intl.DateTimeFormat("es-AR", { weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "America/Argentina/Buenos_Aires" })
+    .format(new Date()).replace(",", "");
+  $("#fecha").textContent = f.charAt(0).toUpperCase() + f.slice(1);
+}
+
+function parseFeed(xmlText) {
+  const doc = new DOMParser().parseFromString(xmlText, "application/xml");
+  if (doc.querySelector("parsererror")) throw new Error("XML inválido");
+  const sections = { obras: [], accesos: [], costa: [], transporte: [] };
+  doc.querySelectorAll("item").forEach(it => {
+    const guid = (it.querySelector("guid")?.textContent || "").trim();
+    const key = guid.split("-")[0];
+    if (!(key in sections)) return;
+    const html = it.querySelector("description")?.textContent || "";
+    const d = new DOMParser().parseFromString(html, "text/html");
+    d.querySelectorAll("li").forEach(li => sections[key].push(li.textContent.replace(/\s+/g, " ").trim()));
+  });
+  const lb = doc.querySelector("lastBuildDate")?.textContent;
+  const built = lb ? new Date(lb) : null;
+  return { sections, built: built && !isNaN(built) ? built : null };
+}
+
+function setPill(card, status, cfg) {
+  const pill = $(".pill", card);
+  const icon = { ok: "i-check", warn: "i-warn", bad: "i-cross", none: "i-q" }[status];
+  let l1, l2;
+  if (status === "ok") [l1, l2] = ["SIN NOVEDADES", "EN EL REPORTE ACTUAL"];
+  else if (status === "warn") [l1, l2] = cfg.warn;
+  else if (status === "bad") [l1, l2] = cfg.bad;
+  else [l1, l2] = ["SIN INFORMACIÓN", ""];
+  pill.className = "pill " + status;
+  pill.innerHTML = "";
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", "0 0 32 32");
+  const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
+  use.setAttribute("href", "#" + icon);
+  svg.appendChild(use);
+  const box = document.createElement("span");
+  const a = document.createElement("span"); a.className = "t1"; a.textContent = l1;
+  box.appendChild(a);
+  if (l2) { const b = document.createElement("span"); b.className = "t2"; b.textContent = l2; box.appendChild(b); }
+  pill.append(svg, box);
+}
+
+function renderCard(id, data) {
+  const cfg = CARDS[id], card = $("#c-" + id), body = $(".body", card);
+  body.textContent = "";
+  if (!data) {
+    setPill(card, "none", cfg);
+    body.textContent = "No se pudo cargar el reporte. Se reintenta automáticamente.";
+    return;
+  }
+  const all = cfg.sections.flatMap(k => data.sections[k] || []).filter(t => cfg.match.test(t));
+  const active = all.filter(t => !ONGOING_RE.test(t));
+  const ongoing = all.filter(t => ONGOING_RE.test(t));
+  const status = active.length === 0 ? "ok" : (active.some(t => BAD_RE.test(t)) ? "bad" : "warn");
+  setPill(card, status, cfg);
+
+  const ul = document.createElement("ul");
+  if (!active.length) { const li = document.createElement("li"); li.textContent = cfg.okText; li.style.listStyle = "none"; li.className = "plain"; ul.appendChild(li); }
+  active.slice(0, MAX_ITEMS).forEach(t => { const li = document.createElement("li"); li.textContent = txt(t, MAX_CHARS); ul.appendChild(li); });
+  ongoing.slice(0, 2).forEach(t => { const li = document.createElement("li"); li.className = "info"; li.textContent = txt(t, MAX_CHARS); ul.appendChild(li); });
+  body.appendChild(ul);
+  if (active.length > MAX_ITEMS) { const m = document.createElement("div"); m.className = "more"; m.textContent = "+" + (active.length - MAX_ITEMS) + " alertas más"; body.appendChild(m); }
+}
+
+function renderAll(data) {
+  Object.keys(CARDS).forEach(id => renderCard(id, data));
+  const upd = $("#upd");
+  if (!data) { upd.textContent = "Sin conexión con el reporte. Reintentando…"; return; }
+  const hh = d => d.toLocaleTimeString("es-AR", { hour: "2-digit", minute: "2-digit", timeZone: "America/Argentina/Buenos_Aires" });
+  let t = "Actualizado a las " + hh(data.built || new Date()) + " · se renueva cada 20 min";
+  if (data.built && (Date.now() - data.built.getTime()) / 60000 > STALE_MIN) t = "⚠ Datos desactualizados (último reporte " + hh(data.built) + ")";
+  upd.textContent = t;
+}
+
+let timer = null;
+async function load() {
+  clearTimeout(timer);
+  renderDate();
+  let next = REFRESH_MS;
+  try {
+    if (location.hash === "#demo") { $("#demo").style.display = "block"; renderAll(DEMO); }
+    else {
+      const r = await fetch(RSS_URL + "?t=" + Date.now(), { cache: "no-store" });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      renderAll(parseFeed(await r.text()));
+    }
+  } catch (e) {
+    console.warn("No se pudo actualizar:", e);
+    renderAll(null);
+    next = RETRY_MS;
+  }
+  timer = setTimeout(load, next);
+}
+document.addEventListener("visibilitychange", () => { if (!document.hidden) load(); });
+load();
+</script>
+</body>
+</html>

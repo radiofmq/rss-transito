@@ -5,7 +5,7 @@
     <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
     <description>Resumen de inconvenientes: obras y cortes, accesos y autopistas (AUBASA), camino a la Costa Atlántica y transporte público.</description>
     <language>es-AR</language>
-    <lastBuildDate>Mon, 09 Nov 2026 01:42:02 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 16:26:02 -0300</lastBuildDate>
     <ttl>15</ttl>
     <atom:link href="https://radiofmq.github.io/rss-transito/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -14,13 +14,6 @@
       <guid isPermaLink="false">accesos-11740e438f57</guid>
       <pubDate>Fri, 06 Nov 2026 18:08:13 -0300</pubDate>
       <description><![CDATA[<ul><li data-ts="2026-11-06T18:08:13-03:00">Cerraron el ingreso de Lacarra a AU Dellepiane en sentido provincia durante 10 días para realizar arreglos en calzada. Como alternativa: ingresar por Av. Escalada.</li></ul>]]></description>
-    </item>
-    <item>
-      <title>🚧 Obras y cortes — 05/11 07:49</title>
-      <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
-      <guid isPermaLink="false">obras-55c5656a8ae8</guid>
-      <pubDate>Thu, 05 Nov 2026 07:49:26 -0300</pubDate>
-      <description><![CDATA[<ul><li data-ts="2026-11-05T07:49:26-03:00"><b>AUBASA (Bs. As.–La Plata):</b> Por obras permanecerá cerrado el egreso hacia Punta Lara altura km 52,8. Opción de egreso: Hacia Diagonal 74 girar en rotonda y retomar por Diagonal hacia Punta Lara.</li></ul>]]></description>
     </item>
   </channel>
 </rss>

@@ -5,9 +5,22 @@
     <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
     <description>Resumen de inconvenientes: obras y cortes, accesos y autopistas (AUBASA), camino a la Costa Atlántica y transporte público.</description>
     <language>es-AR</language>
-    <lastBuildDate>Wed, 11 Nov 2026 19:34:08 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 20:29:22 -0300</lastBuildDate>
     <ttl>15</ttl>
     <atom:link href="https://radiofmq.github.io/rss-transito/rss.xml" rel="self" type="application/rss+xml"/>
-
+    <item>
+      <title>🚧 Obras y cortes — 11/11 20:29</title>
+      <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
+      <guid isPermaLink="false">obras-55c5656a8ae8</guid>
+      <pubDate>Wed, 11 Nov 2026 20:29:22 -0300</pubDate>
+      <description><![CDATA[<ul><li data-ts="2026-11-11T20:29:22-03:00"><b>AUBASA (Bs. As.–La Plata):</b> Por obras permanecerá cerrado el egreso hacia Punta Lara altura km 52,8. Opción de egreso: Hacia Diagonal 74 girar en rotonda y retomar por Diagonal hacia Punta Lara.</li></ul>]]></description>
+    </item>
+    <item>
+      <title>🚆 Transporte público — 11/11 19:42</title>
+      <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
+      <guid isPermaLink="false">transporte-38c323c51ca2</guid>
+      <pubDate>Wed, 11 Nov 2026 19:42:27 -0300</pubDate>
+      <description><![CDATA[<ul><li data-ts="2026-11-11T19:42:27.771000-03:00"><a href="https://www.alertastransito.com/2026/11/Subte-Interrumpiran-el-servicio-por-el-reclamo-contra-el-asbesto.html">Subte: Interrumpirán el servicio por el reclamo contra el asbesto</a></li></ul>]]></description>
+    </item>
   </channel>
 </rss>

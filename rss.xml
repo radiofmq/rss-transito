@@ -5,9 +5,15 @@
     <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
     <description>Resumen de inconvenientes: obras y cortes, accesos y autopistas (AUBASA), camino a la Costa Atlántica y transporte público.</description>
     <language>es-AR</language>
-    <lastBuildDate>Mon, 16 Nov 2026 00:53:35 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 06:33:07 -0300</lastBuildDate>
     <ttl>15</ttl>
     <atom:link href="https://radiofmq.github.io/rss-transito/rss.xml" rel="self" type="application/rss+xml"/>
-
+    <item>
+      <title>🚗 Accesos y autopistas — 16/11 06:33</title>
+      <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
+      <guid isPermaLink="false">accesos-be746bdfcb23</guid>
+      <pubDate>Mon, 16 Nov 2026 06:33:07 -0300</pubDate>
+      <description><![CDATA[<ul><li data-ts="2026-11-16T06:33:07-03:00">Camino Negro mano al centro.</li><li data-ts="2026-11-16T06:33:07-03:00">Gral Paz mano al Río.</li><li data-ts="2026-11-16T06:33:07-03:00">Riccheri mano al centro.</li><li data-ts="2026-11-16T06:33:07-03:00">Dellepiane mano al centro.</li><li data-ts="2026-11-16T06:33:07-03:00">Acceso Oeste mano al centro.</li><li data-ts="2026-11-16T06:33:07-03:00">Panamericana mano al centro.</li><li data-ts="2026-11-16T06:33:07-03:00"><b>AUBASA (Bs. As.–La Plata):</b> Precaucion: vehículo detenido km 8,5 sentido CABA, calzada reducida.</li><li data-ts="2026-11-16T06:33:07-03:00"><b>AUBASA (Bs. As.–La Plata):</b> Precaución: vehículo detenido en el km 7,2 sentido La Plata, afecta carril 1.</li></ul>]]></description>
+    </item>
   </channel>
 </rss>

@@ -5,15 +5,22 @@
     <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
     <description>Resumen de inconvenientes: obras y cortes, accesos y autopistas (AUBASA), camino a la Costa Atlántica y transporte público.</description>
     <language>es-AR</language>
-    <lastBuildDate>Wed, 18 Nov 2026 05:50:03 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 08:48:33 -0300</lastBuildDate>
     <ttl>15</ttl>
     <atom:link href="https://radiofmq.github.io/rss-transito/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>🚆 Transporte público — 17/11 13:41</title>
+      <title>🚗 Accesos y autopistas — 18/11 08:48</title>
       <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
-      <guid isPermaLink="false">transporte-b121c4161568</guid>
-      <pubDate>Tue, 17 Nov 2026 13:41:06 -0300</pubDate>
-      <description><![CDATA[<ul><li data-ts="2026-11-17T13:41:06.046000-03:00"><a href="https://www.alertastransito.com/2026/11/Tren-Mitre-interrupciones-y-recorridos-limitados-durante-tres-dias.html">Tren Mitre: Interrupciones y recorridos limitados durante tres días</a></li></ul>]]></description>
+      <guid isPermaLink="false">accesos-ff96402237e7</guid>
+      <pubDate>Wed, 18 Nov 2026 08:48:33 -0300</pubDate>
+      <description><![CDATA[<ul><li data-ts="2026-11-18T08:48:33-03:00">Camino Negro mano al centro.</li><li data-ts="2026-11-18T08:48:33-03:00">Gral Paz mano al Río.</li><li data-ts="2026-11-18T08:48:33-03:00">Riccheri mano al centro.</li><li data-ts="2026-11-18T08:48:33-03:00">Dellepiane mano al centro.</li><li data-ts="2026-11-18T08:48:33-03:00">Acceso Oeste mano al centro.</li><li data-ts="2026-11-18T08:48:33-03:00">Panamericana mano al centro.</li><li data-ts="2026-11-18T08:48:33-03:00"><b>AUBASA (Bs. As.–La Plata):</b> Tránsito con marcha lenta desde zona Wilde sentido CABA. Hacia La Plata sin demoras.</li><li data-ts="2026-11-18T08:48:33-03:00"><b>AUBASA (Bs. As.–La Plata):</b> Continúa balizamiento por trabajos de mantenimiento desde el km 7,8 hasta el km 7,2 sentido CABA, afecta carril 1.</li></ul>]]></description>
+    </item>
+    <item>
+      <title>🚆 Transporte público — 18/11 07:08</title>
+      <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
+      <guid isPermaLink="false">transporte-de20bc45cc71</guid>
+      <pubDate>Wed, 18 Nov 2026 07:08:59 -0300</pubDate>
+      <description><![CDATA[<ul><li data-ts="2026-11-18T07:08:59.674000-03:00"><a href="https://www.alertastransito.com/2026/11/Tren-Sarmiento-recorrido-limitado-durante-el-fin-de-semana-largo.html">Tren Sarmiento: Recorrido limitado durante el fin de semana largo</a></li><li data-ts="2026-11-17T13:41:06.046000-03:00"><a href="https://www.alertastransito.com/2026/11/Tren-Mitre-interrupciones-y-recorridos-limitados-durante-tres-dias.html">Tren Mitre: Interrupciones y recorridos limitados durante tres días</a></li></ul>]]></description>
     </item>
   </channel>
 </rss>

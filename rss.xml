@@ -5,22 +5,15 @@
     <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
     <description>Resumen de inconvenientes: obras y cortes, accesos y autopistas (AUBASA), camino a la Costa Atlántica y transporte público.</description>
     <language>es-AR</language>
-    <lastBuildDate>Sat, 21 Nov 2026 12:52:22 -0300</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 14:23:58 -0300</lastBuildDate>
     <ttl>15</ttl>
     <atom:link href="https://radiofmq.github.io/rss-transito/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>🚧 Obras y cortes — 20/11 17:38</title>
-      <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
-      <guid isPermaLink="false">obras-65f7d1d0f32d</guid>
-      <pubDate>Fri, 20 Nov 2026 17:38:14 -0300</pubDate>
-      <description><![CDATA[<ul><li data-ts="2026-11-20T17:38:14-03:00">Policía cierra salida A. Jonte de AU Perito Moreno sentido a Gral Paz por partido en cancha de Vélez.</li></ul>]]></description>
-    </item>
-    <item>
       <title>🚆 Transporte público — 18/11 07:08</title>
       <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
-      <guid isPermaLink="false">transporte-de20bc45cc71</guid>
+      <guid isPermaLink="false">transporte-fa333086f3be</guid>
       <pubDate>Wed, 18 Nov 2026 07:08:59 -0300</pubDate>
-      <description><![CDATA[<ul><li data-ts="2026-11-18T07:08:59.674000-03:00"><a href="https://www.alertastransito.com/2026/11/Tren-Sarmiento-recorrido-limitado-durante-el-fin-de-semana-largo.html">Tren Sarmiento: Recorrido limitado durante el fin de semana largo</a></li><li data-ts="2026-11-17T13:41:06.046000-03:00"><a href="https://www.alertastransito.com/2026/11/Tren-Mitre-interrupciones-y-recorridos-limitados-durante-tres-dias.html">Tren Mitre: Interrupciones y recorridos limitados durante tres días</a></li></ul>]]></description>
+      <description><![CDATA[<ul><li data-ts="2026-11-18T07:08:59.674000-03:00"><a href="https://www.alertastransito.com/2026/11/Tren-Sarmiento-recorrido-limitado-durante-el-fin-de-semana-largo.html">Tren Sarmiento: Recorrido limitado durante el fin de semana largo</a></li></ul>]]></description>
     </item>
   </channel>
 </rss>

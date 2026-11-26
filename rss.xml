@@ -5,15 +5,9 @@
     <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
     <description>Resumen de inconvenientes: obras y cortes, accesos y autopistas (AUBASA), camino a la Costa Atlántica y transporte público.</description>
     <language>es-AR</language>
-    <lastBuildDate>Wed, 25 Nov 2026 08:36:29 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 01:42:00 -0300</lastBuildDate>
     <ttl>15</ttl>
     <atom:link href="https://radiofmq.github.io/rss-transito/rss.xml" rel="self" type="application/rss+xml"/>
-    <item>
-      <title>🚗 Accesos y autopistas — 25/11 08:36</title>
-      <link>https://www.alertastransito.com/p/alertas-de-transito-y-tiempo-manana-y.html</link>
-      <guid isPermaLink="false">accesos-45c39a0fd19b</guid>
-      <pubDate>Wed, 25 Nov 2026 08:36:29 -0300</pubDate>
-      <description><![CDATA[<ul><li data-ts="2026-11-25T08:36:29-03:00">Camino Negro mano al centro.</li><li data-ts="2026-11-25T08:36:29-03:00">Gral Paz mano al Río.</li><li data-ts="2026-11-25T08:36:29-03:00">Riccheri mano al centro.</li><li data-ts="2026-11-25T08:36:29-03:00">Dellepiane mano al centro.</li><li data-ts="2026-11-25T08:36:29-03:00">Acceso Oeste mano al centro.</li><li data-ts="2026-11-25T08:36:29-03:00">Panamericana mano al centro.</li><li data-ts="2026-11-25T08:36:29-03:00"><b>AUBASA (Bs. As.–La Plata):</b> Tránsito con marcha lenta desde zona Wilde, Sarandi sentido a CABA. Hacia La Plata sin demoras.</li></ul>]]></description>
-    </item>
+
   </channel>
 </rss>
